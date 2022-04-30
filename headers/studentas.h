@@ -4,28 +4,14 @@
 
 #include <iostream>
 #include <fstream>
-#include <sstream>
-#include <iomanip>
-#include <random>
 #include <vector>
-#include <algorithm>
-#include <chrono>
 #include <string>
-#include <stdlib.h>
-#include <stdio.h>
-#include <list>
-#include <deque>
+#include <algorithm>
 
 using std::cin;
 using std::cout;
-using std::deque;
 using std::endl;
-using std::left;
-using std::list;
-using std::right;
-using std::setw;
 using std::string;
-using std::to_string;
 using std::vector;
 
 class Studentas : public Validator

@@ -5,6 +5,12 @@
 #include "Generator.h"
 #include "Timer.h"
 
+#include <deque>
+#include <list>
+
+using std::deque;
+using std::list;
+
 class Application : public Validator
 {
 private:
