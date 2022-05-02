@@ -41,3 +41,6 @@ Norint susiinstaliuoti programą reikia turėti mingw ir parsisiųsti visus fail
 | O1             | 0.0147449 s   | 0.100956 s  | 0.584785 s   | 5.61137 s     | 57.8394 s    |
 | O2             | 0.0132218 s   | 0.100368 s  | 0.55616 s    | 5.52116 s     | 58.4422 s    |
 | O3             | 0.0134734 s   | 0.10079 s   | 0.558621 s   | 5.45973 s     | 58.3061 s    |
+
+### V1.2
+Studento klasei pridėtas destruktorius, kopijavimo konstruktorius ir kopijavimo operatorius
