@@ -21,12 +21,17 @@ private:
     string pavarde;
     vector<int> paz;
     int egz;
-    double vid = 0;
-    double med = 0;
+    double vid;
+    double med;
 
     bool checkMark(int n);
 
 public:
+    Studentas();
+    Studentas(const Studentas &s);
+    Studentas &operator=(const Studentas &s);
+    ~Studentas();
+
     void setFirstName(string name);
     void setFirstName(std::istream &name);
     void setLastName(string name);

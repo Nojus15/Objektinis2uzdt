@@ -104,3 +104,31 @@ bool isVargsas(Studentas &a)
         return true;
     return false;
 }
+Studentas::Studentas() : vid(0), med(0) {}
+Studentas::Studentas(const Studentas &s)
+{
+    vardas = s.vardas;
+    pavarde = s.pavarde;
+    for (int i = 0; i != s.paz.size(); i++)
+        paz[i] = s.paz[i];
+    egz = s.egz;
+    vid = s.vid;
+    med = s.med;
+}
+Studentas &Studentas::operator=(const Studentas &s)
+{
+    if (&s == this)
+        return *this;
+    vardas = s.vardas;
+    pavarde = s.pavarde;
+    for (int i = 0; i != s.paz.size(); i++)
+        paz[i] = s.paz[i];
+    egz = s.egz;
+    vid = s.vid;
+    med = s.med;
+    return *this;
+}
+Studentas::~Studentas()
+{
+    paz.clear();
+};
