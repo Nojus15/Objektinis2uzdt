@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Validator.h"
+#include "Zmogus.h"
 
 #include <iostream>
 #include <fstream>
@@ -14,17 +15,16 @@ using std::endl;
 using std::string;
 using std::vector;
 
-class Studentas : public Validator
+class Studentas : public Zmogus
 {
-private:
-    string vardas;
-    string pavarde;
-    vector<int> paz;
+public:
+    std::vector<int> paz;
     int egz;
     double vid;
     double med;
+    Validator valid;
 
-    bool checkMark(int n);
+    void f(){};
 
 public:
     Studentas();
@@ -32,17 +32,11 @@ public:
     Studentas &operator=(const Studentas &s);
     ~Studentas();
 
-    void setFirstName(string name);
-    void setFirstName(std::istream &name);
-    void setLastName(string name);
-    void setLastName(std::istream &name);
     void setEgz(int mark);
 
-    double getMed();
-    double getVid();
-    double getEgz();
-    std::string getFirstName();
-    std::string getLastName();
+    double getMed() const;
+    double getVid() const;
+    double getEgz() const;
 
     void enterMarkManually();
     void addMark(int mark);

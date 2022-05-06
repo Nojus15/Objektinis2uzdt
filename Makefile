@@ -1,7 +1,7 @@
-main : main.o
-	g++ -o main v1.2.cpp *.o -O3
-main.o :
-	g++ -c cppFiles/*.cpp -O3
+main : compile
+	g++ -o main *.o -O3
+compile :
+	g++ -c v1.5.cpp cppFiles/*.cpp -O3
 clean :
 	del *.exe *.o
 

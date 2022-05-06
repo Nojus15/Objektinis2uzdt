@@ -11,7 +11,6 @@ std::string Application::writeFileName()
 }
 void Application::run()
 {
-    // timer.Start();
     cout << "Ar norite generuoti failus? Jei taip, iveskite 1, jei ne - 0" << endl;
     bool gen = validMode(0, 1);
     if (gen)
@@ -92,10 +91,10 @@ void Application::bufer_read_students(vector<Studentas> &studentai)
     programTimer.Continue();
     otherTimer.Start();
     my_buffer << open_f.rdbuf();
+
     open_f.close();
     std::getline(my_buffer, line);
 
-    int counter = 0;
     while (my_buffer)
     {
         std::getline(my_buffer, line);
@@ -111,7 +110,6 @@ void Application::bufer_read_students(vector<Studentas> &studentai)
             t.addMark(mark);
         }
         t.setEgz(t.get_popMark());
-
         studentai.push_back(t);
     }
     cout << "Failo skaitymas uztruko: " << otherTimer.Stop_Return() << " s" << endl;
@@ -130,7 +128,6 @@ void Application::bufer_read_students(list<Studentas> &studentai)
     open_f.close();
     std::getline(my_buffer, line);
 
-    int counter = 0;
     while (my_buffer)
     {
         std::getline(my_buffer, line);
@@ -164,7 +161,6 @@ void Application::bufer_read_students(deque<Studentas> &studentai)
     open_f.close();
     std::getline(my_buffer, line);
 
-    int counter = 0;
     while (my_buffer)
     {
         std::getline(my_buffer, line);
@@ -325,19 +321,14 @@ void Application::openFile(std::ifstream &open_f)
     }
 }
 
-Application::Application(/* args */)
-{
-}
-
-Application::~Application()
-{
-}
+Application::Application() {}
+Application::~Application() {}
 void Application::sortStudents(vector<Studentas> &kietiakai, vector<Studentas> &vargsai, vector<Studentas> &studentai)
 {
     auto sortStart = hrClock::now();
     for (auto &stud : studentai)
     {
-        if (stud.getVid() < 5 || stud.getMed() < 5)
+        if (stud.getVid() < 5)
             vargsai.push_back(stud);
         else
             kietiakai.push_back(stud);
@@ -350,7 +341,7 @@ void Application::sortStudents(list<Studentas> &kietiakai, list<Studentas> &varg
     auto sortStart = hrClock::now();
     for (auto &stud : studentai)
     {
-        if (stud.getVid() < 5 || stud.getMed() < 5)
+        if (stud.getVid() < 5)
             vargsai.push_back(stud);
         else
             kietiakai.push_back(stud);
@@ -363,7 +354,7 @@ void Application::sortStudents(deque<Studentas> &kietiakai, deque<Studentas> &va
     auto sortStart = hrClock::now();
     for (auto &stud : studentai)
     {
-        if (stud.getVid() < 5 || stud.getMed() < 5)
+        if (stud.getVid() < 5)
             vargsai.push_back(stud);
         else
             kietiakai.push_back(stud);
@@ -496,14 +487,14 @@ void Application::processStrats(vector<Studentas> &studentai, vector<Studentas> 
     if (strat_type == 1)
     {
         bufer_read_students(studentai);
-        for (auto el : studentai)
+        for (auto &el : studentai)
             el.calcRez();
         sortStudents(kietiakai, vargsai, studentai);
     }
     else if (strat_type == 2)
     {
         bufer_read_students(kietiakai);
-        for (auto el : kietiakai)
+        for (auto &el : kietiakai)
             el.calcRez();
         sortStudents2(kietiakai, vargsai);
     }
@@ -513,14 +504,14 @@ void Application::processStrats(list<Studentas> &studentai, list<Studentas> &kie
     if (strat_type == 1)
     {
         bufer_read_students(studentai);
-        for (auto el : studentai)
+        for (auto &el : studentai)
             el.calcRez();
         sortStudents(kietiakai, vargsai, studentai);
     }
     else if (strat_type == 2)
     {
         bufer_read_students(kietiakai);
-        for (auto el : kietiakai)
+        for (auto &el : kietiakai)
             el.calcRez();
         sortStudents2(kietiakai, vargsai);
     }
@@ -530,14 +521,14 @@ void Application::processStrats(deque<Studentas> &studentai, deque<Studentas> &k
     if (strat_type == 1)
     {
         bufer_read_students(studentai);
-        for (auto el : studentai)
+        for (auto &el : studentai)
             el.calcRez();
         sortStudents(kietiakai, vargsai, studentai);
     }
     else if (strat_type == 2)
     {
         bufer_read_students(kietiakai);
-        for (auto el : kietiakai)
+        for (auto &el : kietiakai)
             el.calcRez();
         sortStudents2(kietiakai, vargsai);
     }
