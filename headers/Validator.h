@@ -15,8 +15,6 @@ private:
 public:
     Validator();
     ~Validator();
-
-protected:
     int validMode(int from, int to);
     int enterValidInt();
     bool checkMark(int n);

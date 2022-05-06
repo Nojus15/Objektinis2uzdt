@@ -21,7 +21,6 @@ private:
     std::chrono::time_point<std::chrono::high_resolution_clock> programStart;
     string file_name;
 
-    Studentas studentai;
     Generator generator;
     Timer programTimer;
     Timer otherTimer;
@@ -31,7 +30,7 @@ private:
     bool manual;
 
 public:
-    Application(/* args */);
+    Application();
     ~Application();
     void run();
 
