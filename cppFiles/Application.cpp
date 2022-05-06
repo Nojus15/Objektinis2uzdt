@@ -496,14 +496,14 @@ void Application::processStrats(vector<Studentas> &studentai, vector<Studentas> 
     if (strat_type == 1)
     {
         bufer_read_students(studentai);
-        for (auto el : studentai)
+        for (auto &el : studentai)
             el.calcRez();
         sortStudents(kietiakai, vargsai, studentai);
     }
     else if (strat_type == 2)
     {
         bufer_read_students(kietiakai);
-        for (auto el : kietiakai)
+        for (auto &el : kietiakai)
             el.calcRez();
         sortStudents2(kietiakai, vargsai);
     }
@@ -513,14 +513,14 @@ void Application::processStrats(list<Studentas> &studentai, list<Studentas> &kie
     if (strat_type == 1)
     {
         bufer_read_students(studentai);
-        for (auto el : studentai)
+        for (auto &el : studentai)
             el.calcRez();
         sortStudents(kietiakai, vargsai, studentai);
     }
     else if (strat_type == 2)
     {
         bufer_read_students(kietiakai);
-        for (auto el : kietiakai)
+        for (auto &el : kietiakai)
             el.calcRez();
         sortStudents2(kietiakai, vargsai);
     }
@@ -530,14 +530,14 @@ void Application::processStrats(deque<Studentas> &studentai, deque<Studentas> &k
     if (strat_type == 1)
     {
         bufer_read_students(studentai);
-        for (auto el : studentai)
+        for (auto &el : studentai)
             el.calcRez();
         sortStudents(kietiakai, vargsai, studentai);
     }
     else if (strat_type == 2)
     {
         bufer_read_students(kietiakai);
-        for (auto el : kietiakai)
+        for (auto &el : kietiakai)
             el.calcRez();
         sortStudents2(kietiakai, vargsai);
     }
