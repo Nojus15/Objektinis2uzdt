@@ -44,3 +44,9 @@ Norint susiinstaliuoti programą reikia turėti mingw ir parsisiųsti visus fail
 
 ### V1.2
 Studento klasei pridėtas destruktorius, kopijavimo konstruktorius ir kopijavimo operatorius
+
+### V1.5
+Sukurta abstrakti klasė Zmogus, kuria paveldi Studentas
+
+### v2.0
+Sukurta Doxygen dokumentacija, atlikti Unit testai, sukurtas automatinis diegimo failas
