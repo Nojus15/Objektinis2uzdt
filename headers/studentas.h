@@ -17,7 +17,7 @@ using std::vector;
 
 class Studentas : public Zmogus
 {
-public:
+private:
     std::vector<int> paz;
     int egz;
     double vid;

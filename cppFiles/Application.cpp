@@ -452,6 +452,7 @@ void Application::runAutoMode()
 
 void Application::runManualMode()
 {
+    otherTimer.Start();
     vector<Studentas> studentai;
     cout << "Jei norite egzamino rezultata ivesti ranka spauskite 1, jei generuoti automatiskai spauskite 0" << endl;
     egz = validMode(0, 1);
@@ -478,7 +479,7 @@ void Application::runManualMode()
               { return a.getFirstName() < b.getLastName(); });
 
     bufer_write_students("rez.txt", studentai);
-    cout << "Visos programos veikimo laikas: " << durationDouble(hrClock::now() - programStart).count() << " s" << endl;
+    cout << "Visos programos veikimo laikas: " << otherTimer.Stop_Return() << " s" << endl;
     cout << "-------------------------" << endl;
 }
 
