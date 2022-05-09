@@ -1,0 +1,48 @@
+\hypertarget{_generator_8h_source}{}\doxysection{Generator.\+h}
+\label{_generator_8h_source}\index{headers/Generator.h@{headers/Generator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{comment}{// +}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Timer.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using} std::cin;}
+\DoxyCodeLine{12 \textcolor{keyword}{using} std::cout;}
+\DoxyCodeLine{13 \textcolor{keyword}{using} std::endl;}
+\DoxyCodeLine{14 \textcolor{keyword}{using} std::left;}
+\DoxyCodeLine{15 \textcolor{keyword}{using} std::mt19937;}
+\DoxyCodeLine{16 \textcolor{keyword}{using} std::setw;}
+\DoxyCodeLine{17 \textcolor{keyword}{using} std::string;}
+\DoxyCodeLine{18 \textcolor{keyword}{using} std::to\_string;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_generator}{Generator}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     std::string file\_name;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} studCount;}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} ndCount;}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_timer}{Timer}} genTimer;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_generator}{Generator}}();}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_generator}{\string~Generator}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} set\_file\_name(std::string name);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} set\_stud\_count(\textcolor{keywordtype}{int} amount);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} set\_nd\_count(\textcolor{keywordtype}{int} amount);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} generateRandomMark();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} genFile();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     std::stringstream genStudentStringStream(\textcolor{keywordtype}{int} ndCount);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} randomInt(\textcolor{keywordtype}{int} from, \textcolor{keywordtype}{int} to);}
+\DoxyCodeLine{40     std::string randFirstName();}
+\DoxyCodeLine{41     std::string randLastName();}
+\DoxyCodeLine{42 \};}
+
+\end{DoxyCode}

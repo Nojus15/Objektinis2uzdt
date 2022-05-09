@@ -1,0 +1,57 @@
+\hypertarget{studentas_8h_source}{}\doxysection{studentas.\+h}
+\label{studentas_8h_source}\index{headers/studentas.h@{headers/studentas.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Validator.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Zmogus.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using} std::cin;}
+\DoxyCodeLine{13 \textcolor{keyword}{using} std::cout;}
+\DoxyCodeLine{14 \textcolor{keyword}{using} std::endl;}
+\DoxyCodeLine{15 \textcolor{keyword}{using} std::string;}
+\DoxyCodeLine{16 \textcolor{keyword}{using} std::vector;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_studentas}{Studentas}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_zmogus}{Zmogus}}}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     std::vector<int> paz;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} egz;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{double} vid;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{double} med;}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_validator}{Validator}} valid;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} f()\{\};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_studentas}{Studentas}}();}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_studentas}{Studentas}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_studentas}{Studentas}} \&s);}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_studentas}{Studentas}} \&operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_studentas}{Studentas}} \&s);}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_studentas}{\string~Studentas}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} setEgz(\textcolor{keywordtype}{int} mark);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{double} getMed() \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{double} getVid() \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{double} getEgz() \textcolor{keyword}{const};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} enterMarkManually();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} addMark(\textcolor{keywordtype}{int} mark);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} get\_popMark();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} galutinisVid();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} galutinisMed();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} calcRez();}
+\DoxyCodeLine{48 \};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keywordtype}{bool} compare(\mbox{\hyperlink{class_studentas}{Studentas}} \&a, \mbox{\hyperlink{class_studentas}{Studentas}} \&b);}
+\DoxyCodeLine{51 \textcolor{keywordtype}{bool} isVargsas(\mbox{\hyperlink{class_studentas}{Studentas}} \&a);}
+
+\end{DoxyCode}

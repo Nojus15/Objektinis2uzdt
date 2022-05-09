@@ -1,0 +1,31 @@
+\hypertarget{_timer_8h_source}{}\doxysection{Timer.\+h}
+\label{_timer_8h_source}\index{headers/Timer.h@{headers/Timer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{using} timePoint = std::chrono::time\_point<std::chrono::high\_resolution\_clock>;}
+\DoxyCodeLine{7 \textcolor{keyword}{using} durationDouble = std::chrono::duration<double>;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using} hrClock = std::chrono::high\_resolution\_clock;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_timer}{Timer}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     timePoint Start\_point;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{double} timeElapsed;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_timer}{Timer}}();}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_timer}{\string~Timer}}();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} Start();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} Stop();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} Continue();}
+\DoxyCodeLine{23     \textcolor{keywordtype}{double} returnTime();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{double} Stop\_Return();}
+\DoxyCodeLine{25 \};}
+
+\end{DoxyCode}

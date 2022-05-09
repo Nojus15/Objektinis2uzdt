@@ -1,0 +1,36 @@
+\hypertarget{_zmogus_8h_source}{}\doxysection{Zmogus.\+h}
+\label{_zmogus_8h_source}\index{headers/Zmogus.h@{headers/Zmogus.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using} std::string;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_zmogus}{Zmogus}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{string} vardas;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{string} pavarde;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} f() = 0;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_zmogus}{Zmogus}}();}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_zmogus}{\string~Zmogus}}();}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_zmogus}{Zmogus}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_zmogus}{Zmogus}} \&z);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} setFirstName(\textcolor{keywordtype}{string} \&name);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} setFirstName(std::istream \&name);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} setLastName(\textcolor{keywordtype}{string} \&name);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} setLastName(std::istream \&name);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} setEgz(\textcolor{keywordtype}{int} mark);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     std::string getFirstName() \textcolor{keyword}{const};}
+\DoxyCodeLine{29     std::string getLastName() \textcolor{keyword}{const};}
+\DoxyCodeLine{30 \};}
+
+\end{DoxyCode}

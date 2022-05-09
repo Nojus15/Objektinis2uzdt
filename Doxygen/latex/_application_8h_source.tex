@@ -1,0 +1,80 @@
+\hypertarget{_application_8h_source}{}\doxysection{Application.\+h}
+\label{_application_8h_source}\index{headers/Application.h@{headers/Application.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Validator.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Studentas.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Generator.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Timer.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <deque>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using} std::deque;}
+\DoxyCodeLine{12 \textcolor{keyword}{using} std::list;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_application}{Application}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_validator}{Validator}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} genMode;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} programMode;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} container\_type;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} strat\_type;}
+\DoxyCodeLine{21     std::chrono::time\_point<std::chrono::high\_resolution\_clock> programStart;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{string} file\_name;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{class_generator}{Generator}} generator;}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_timer}{Timer}} programTimer;}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_timer}{Timer}} otherTimer;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} egz;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} paz;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} manual;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_application}{Application}}();}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_application}{\string~Application}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{private}:}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} ivestis(\mbox{\hyperlink{class_studentas}{Studentas}} \&temp);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} bufer\_read\_students(vector<Studentas> \&studentai);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} bufer\_write\_students(std::string write\_vardas, vector<Studentas> \&studentai);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} bufer\_read\_students(list<Studentas> \&studentai);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} bufer\_write\_students(std::string write\_vardas, list<Studentas> \&studentai);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} bufer\_read\_students(deque<Studentas> \&studentai);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} bufer\_write\_students(std::string write\_vardas, deque<Studentas> \&studentai);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} bufer\_to\_container();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} genFile(\textcolor{keywordtype}{int} size, \textcolor{keywordtype}{string} file\_name, \textcolor{keywordtype}{int} ndCount);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} containerToFile(\textcolor{keywordtype}{string} file\_name, vector<Studentas> \&data);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} containerToFile(\textcolor{keywordtype}{string} file\_name, list<Studentas> \&data);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} containerToFile(\textcolor{keywordtype}{string} file\_name, deque<Studentas> \&data);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} openFile(std::ifstream \&open\_f);}
+\DoxyCodeLine{56     std::string writeFileName();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} printToFile(\textcolor{keywordtype}{string} text);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} sortStudents(vector<Studentas> \&kietiakai, vector<Studentas> \&vargsai, vector<Studentas> \&students);}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} sortStudents(list<Studentas> \&kietiakai, list<Studentas> \&vargsai, list<Studentas> \&students);}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} sortStudents(deque<Studentas> \&kietiakai, deque<Studentas> \&vargsai, deque<Studentas> \&students);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} sortStudents2(vector<Studentas> \&kietiakai, vector<Studentas> \&vargsai);}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} sortStudents2(list<Studentas> \&kietiakai, list<Studentas> \&vargsai);}
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} sortStudents2(deque<Studentas> \&kietiakai, deque<Studentas> \&vargsai);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} processStrats(vector<Studentas> \&studentai, vector<Studentas> \&kietiakai, vector<Studentas> \&vargsai);}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} processStrats(list<Studentas> \&studentai, list<Studentas> \&kietiakai, list<Studentas> \&vargsai);}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} processStrats(deque<Studentas> \&studentai, deque<Studentas> \&kietiakai, deque<Studentas> \&vargsai);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} runManualMode();}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} runAutoMode();}
+\DoxyCodeLine{74 \};}
+
+\end{DoxyCode}
