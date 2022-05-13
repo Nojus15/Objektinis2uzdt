@@ -33,3 +33,7 @@
 
 *.exe
 *.txt
+
+/googleTest/*
+!googleTest/test.cpp
+setup
